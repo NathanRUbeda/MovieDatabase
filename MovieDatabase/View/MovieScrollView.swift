@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-/// Displays a ScrollView
+/// Displays a ScrollView of NavigationLinks labeled with movie posters.
 struct MovieScrollView: View {
 	let movies: [Movie]
 	

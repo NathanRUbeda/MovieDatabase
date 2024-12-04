@@ -7,45 +7,22 @@
 
 import SwiftUI
 
+/// Displays a TabView with views for an Explore page and a Search page.
 struct ContentView: View {
-	@State private var query = ""
-	@State private var movies: MovieResponse?
-	let movieClient = MovieClient()
+	 var viewModel: MovieViewModel
 	
 	var body: some View {
-		NavigationStack {
-			ScrollView {
-				VStack {
-					TextField("Search for a movie...", text: $query)
-						.onSubmit {
-							Task {
-								do {
-									self.movies = try await movieClient.fetchSearchedMovies(query: query)
-								} catch {
-									print(error)
-								}
-							}
-						}
-					
-					if let movies {
-						ForEach(movies.results) { movie in
-							NavigationLink {
-								MovieDetailView(movie: movie)
-							} label: {
-								VStack {
-									MoviePosterView(movie: movie)
-									
-									Text(movie.title)
-								}
-							}
-						}
-					}
+		TabView {
+			ExploreView(viewModel: viewModel)
+				.tabItem {
+					Image(systemName: "globe")
 				}
-			}
+			
+			SearchView(viewModel: viewModel)
+				.tabItem {
+					Image(systemName: "magnifyingglass")
+				}
 		}
 	}
 }
 
-#Preview {
-    ContentView()
-}

@@ -6,3 +6,11 @@
 //
 
 import Foundation
+
+/// Enum of possible network errors.
+enum NetworkError: Error {
+	case missingAuthorization
+	case invalidURL
+	case missingJSON
+	case loadingError
+}
