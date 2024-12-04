@@ -29,14 +29,51 @@
 		B1423F6F2CD910C000E8DC16 /* MovieDatabaseUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MovieDatabaseUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		B1423FB02CD9139B00E8DC16 /* Exceptions for "MovieDatabase" folder in "MovieDatabase" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = B1423F532CD910BF00E8DC16 /* MovieDatabase */;
+		};
+		B14DE9592CFBD47700C4FF48 /* Exceptions for "MovieDatabaseTests" folder in "MovieDatabase" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				"Mock JSONs/mockNowPlayingMoviesJSON.json",
+				"Mock JSONs/mockPopularMoviesJSON.json",
+				"Mock JSONs/mockSearchedSpidermanMovieJSON.json",
+				"Mock JSONs/mockSearchedTrainYourDragonMovieJSON.json",
+				"Mock JSONs/mockSearchedWhiplashMovieJSON.json",
+				"Mock JSONs/mockTopRatedMoviesJSON.json",
+				"Mock JSONs/mockUpcomingMoviesJSON.json",
+			);
+			target = B1423F532CD910BF00E8DC16 /* MovieDatabase */;
+		};
+		B14DE95A2CFBD47700C4FF48 /* Exceptions for "MovieDatabaseTests" folder in "MovieDatabaseTests" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				"Mock JSONs/mockNowPlayingMoviesJSON.json",
+			);
+			target = B1423F642CD910C000E8DC16 /* MovieDatabaseTests */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		B1423F562CD910BF00E8DC16 /* MovieDatabase */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				B1423FB02CD9139B00E8DC16 /* Exceptions for "MovieDatabase" folder in "MovieDatabase" target */,
+			);
 			path = MovieDatabase;
 			sourceTree = "<group>";
 		};
 		B1423F682CD910C000E8DC16 /* MovieDatabaseTests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				B14DE9592CFBD47700C4FF48 /* Exceptions for "MovieDatabaseTests" folder in "MovieDatabase" target */,
+				B14DE95A2CFBD47700C4FF48 /* Exceptions for "MovieDatabaseTests" folder in "MovieDatabaseTests" target */,
+			);
 			path = MovieDatabaseTests;
 			sourceTree = "<group>";
 		};
@@ -396,6 +433,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MovieDatabase/Info.plist;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -435,6 +473,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MovieDatabase/Info.plist;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
